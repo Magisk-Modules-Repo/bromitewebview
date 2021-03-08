@@ -69,13 +69,13 @@ set_config () {
 	fi
 	if "$UNGOOGLED"
 	then
-		ui_print "- Ungoogled chrome selected"
+		ui_print "- Ungoogled Chromium selected"
 		BROMITE=false
 		VANILLA=false
 	fi
 	if "$VANILLA"
 	then
-		ui_print "- Vanilla chromium selected"
+		ui_print "- Vanilla Chromium selected"
 		UNGOOGLED=false
 		BROMITE=false
 	fi
@@ -332,7 +332,7 @@ if [ -s "$MODPATH"/unsigned.apk ]; then
 	rm -rf "$MODPATH"/signed.apk "$MODPATH"/unsigned.apk
 else
 	ui_print " Overlay creation has failed! Some ROMs have this issue"
-	ui_print " Compatibility cannot be gauraunteed, contact me on telegram to try to fix!"
+	ui_print " Compatibility cannot be guaranteed, contact me on Telegram to try to fix!"
 fi
 if [ -d /product/overlay ];
 then
@@ -444,7 +444,7 @@ do_install () {
 }
 clean_dalvik () {
 	# Removes dalvik cache to re-register our overlay and webview
-	ui_print "Dalvik cache will be clear next boot"
+	ui_print "Dalvik cache will be cleared at next boot"
 	ui_print "Expect longer boot time"
 }
 do_cleanup () {
@@ -454,7 +454,7 @@ do_cleanup () {
 	rm -f "$MODPATH"/system/app/placeholder
 	mkdir -p /storage/emulated/0/WebviewSwitcher/logs
 	rm -f "$MODPATH"/*.md
-	ui_print "- Backing up important stuffs to module directory"
+	ui_print "- Backing up important stuff to module directory"
 	mkdir -p "$MODPATH"/backup/
 	cp /data/system/overlays.xml "$MODPATH"/backup/
 	clean_dalvik
@@ -468,8 +468,8 @@ else
 fi
 ui_print "  ===== VERY IMPORTANT PLEASE READ ======"
 ui_print " Reboot immediately after flashing or you may experience some issues! "
-ui_print " Also, if you had any other webview such as Google webview, it's gone"
-ui_print " You can reinstall but beware conflicts"
+ui_print " Also, if you had any other webview such as Google Webview, it's gone"
+ui_print " You can reinstall but beware of conflicts"
 ui_print " Enjoy a more private and faster webview, done systemlessly"
 ui_print " "
 sleep 0.25
